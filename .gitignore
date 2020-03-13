@@ -1,0 +1,5 @@
+.stack-work/
+online-hf.cabal
+*~
+frontend/elm-stuff
+frontend/index.html
