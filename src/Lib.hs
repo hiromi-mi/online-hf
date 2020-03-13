@@ -32,9 +32,9 @@ type Compile = "compile" :> ReqBody '[JSON] SourceCode :> Post '[JSON] Compiled
         :<|>   "frontend" :> Raw
 
 data Compiled = Compiled
-   { outout :: String
-   , outerr :: String
-   } deriving (Eq, Show, Generic)
+    { outout :: String
+    , outerr :: String
+    } deriving (Eq, Show, Generic)
 
 data SourceCode = SourceCode { code :: String} deriving (Eq, Show, Generic)
 

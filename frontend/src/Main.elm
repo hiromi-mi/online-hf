@@ -4,6 +4,7 @@ import Browser
 import Html exposing (..)
 import Html.Events exposing (..)
 import Http
+import Html.Attributes exposing (..)
 import Json.Encode as Encode
 import Json.Decode as D
 
@@ -29,9 +30,9 @@ init _ = ( {source = "", result = ""}, Cmd.none)
 view : Model -> Html Msg
 view model =
     div []
-    [ div [] [textarea [onInput ChangeSource] [ text model.source]]
+    [ div [] [textarea [onInput ChangeSource, rows 20] [ text model.source]]
     , button [onClick Click] [ text "Compile!"]
-    , div [] [textarea [] [text model.result]]
+    , div [] [textarea [rows 10, readonly True] [text model.result]]
     ]
 
 update : Msg -> Model -> (Model, Cmd Msg)
