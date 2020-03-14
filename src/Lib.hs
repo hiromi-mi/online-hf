@@ -55,12 +55,12 @@ runServer = run 8081 app1
 
 someFunc :: SourceCode -> Handler Compiled
 someFunc (SourceCode source)  = do
-    liftIO $ writeFile "/tmp/tmp.c" source
+    liftIO $ writeFile "./tmp.c" source
     liftIO $ putStr source
+    (code, outout, outerr) <- liftIO $ Q.readCreateProcessWithExitCode (Q.proc "./hanando" ["-f", "./tmp.c"]) ""
+    return (Compiled outout outerr)
     -- liftIO $ hFlush stdout
     -- strline <- liftIO $ getLine
-    (code, outout, outerr) <- liftIO $ Q.readCreateProcessWithExitCode (Q.proc "/home/mizunomidori/devel/hanando-fukui/hanando" ["-f", "/tmp/tmp.c"]) ""
-    return (Compiled outout outerr)
     {-
     case code of
         ExitFailure _ -> putStrLn ("Error: " ++ outerr ++  ".")
