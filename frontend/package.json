@@ -1,0 +1,8 @@
+{
+   "name": "online-hf",
+   "main": "app.js",
+  "devDependencies": {
+    "elm-json": ">=0.2.6"
+  },
+  "license": "Apache-2.0"
+}

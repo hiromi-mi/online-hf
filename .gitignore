@@ -2,4 +2,7 @@
 online-hf.cabal
 *~
 frontend/elm-stuff
-frontend/index.html
+frontend/app.js
+frontend/elm-mdc/yarn.lock
+frontend/elm-mdc/node_modules
+frontend/node_modules

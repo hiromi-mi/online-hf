@@ -1,0 +1,20 @@
+<!doctype html>
+<!-- Retrivited from README of https://github.com/aforemny/elm-mdc as template. -->
+<html lang="ja">
+<head>
+   <meta charset="UTF-8">
+   <title>Compile Online!</title>
+     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" rel="stylesheet">
+      <link href="elm-mdc/material-components-web.css" rel="stylesheet">
+</head>
+<body class="mdc-typography">
+   <script src="elm-mdc/elm-mdc.js"></script>
+   <script src="app.js"></script>
+   <div id="elm"/>
+   <script type="text/javascript">
+      Elm.Main.init({ node : document.getElementById('elm')});
+   </script>
+   </div>
+</body>
