@@ -4,6 +4,7 @@
   "devDependencies": {
     "elm-json": ">=0.2.6",
     "elm-webpack-loader": "^6.0.1",
+    "sass": "^1.26.3",
     "webpack-cli": "^3.3.11"
   },
   "license": "Apache-2.0",
