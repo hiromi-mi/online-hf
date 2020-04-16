@@ -1,7 +1,11 @@
 const path = require('path');
 // https://github.com/elm-community/elm-webpack-loader
 module.exports = {
+   mode: 'development',
    entry: './app.js',
+   output: {
+      path: path.resolve(__dirname, './')
+   },
    module: {
       rules: [
          {
