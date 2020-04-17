@@ -49,7 +49,7 @@ subscriptions model =
 
 view : Model -> Html Msg
 view model =
-    div []
+    div [ style "disyplay: flex" ]
         [ div []
             [ TextField.view Mdc
                 "source"
